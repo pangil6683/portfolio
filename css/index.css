@@ -45,6 +45,7 @@ a{
     list-style: none;
     color : white;
     display: flex;
+    padding-left: 0 ;
 }
 
 .navbar_icons li{
@@ -72,6 +73,5 @@ a{
     .navbar_icons{
         justify-content: center;
         width: 100%;
-        padding : 0;
     }
 }
