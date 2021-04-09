@@ -1,6 +1,77 @@
-#div_main{
-    width: 100%;
-    height : 1000px;
-    background-color: antiquewhite;
-    text-align: center;
+body {
+    margin: 0;
+    padding : 0;
+    font-family: 'Sunflower';
+}
+
+a{
+    text-decoration: none; /* 밑줄 없애기 */
+    color : white;
+}
+    
+.navbar {
+    display: flex; /* 한 줄에 이어서 나열 */
+    justify-content: space-between; /* 스페이스를 사이사이에 넣어준다. */
+    align-items: center; /* 수직 정렬 */
+    background-color: #263343;
+    padding: 8px 12px;
+}
+
+.navbar_logo{
+    font-size: 24px;
+    color : white;
+}
+
+.navbar_logo i{
+    color : orange
+}
+
+.navbar_menu{
+    display: flex; /* 한 줄에 이어서 나열 */
+    list-style: none; /* list들의 온점을 없애줌 */
+    padding-left : 0;
+}
+
+.navbar_menu li {
+    padding : 8px 12px;
+}
+
+.navbar_menu li:hover{
+    background-color: rgba(255, 166, 0, 0.76);
+    border-radius: 4px;
+}
+
+.navbar_icons {
+    list-style: none;
+    color : white;
+    display: flex;
+}
+
+.navbar_icons li{
+    padding : 8px 12px;
+}
+
+@media screen and (max-width : 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding : 8px 24px;
+    }
+
+    .navbar_menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icons{
+        justify-content: center;
+        width: 100%;
+        padding : 0;
+    }
 }
