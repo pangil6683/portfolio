@@ -13,4 +13,4 @@ pageName = pageName[4].split(".");
 
 var test = document.getElementById(pageName[0]);
 test.style.backgroundColor = "#3078c0";
-test.style.borderRadius = "4px";
+test.style.borderRadius = "1vw";

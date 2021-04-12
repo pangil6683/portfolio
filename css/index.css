@@ -38,17 +38,18 @@ a {
     /* 가로로 균등하게 배분하여 정렬, space-between : 양 끝에서 기준 */
     align-items: center;
     /* 세로로 정렬, center : 가운데  */
-    padding: 8px 12px;
+    padding: 1vw 1.5vw;
     /* 안쪽 여백 지정, 위아래 8px, 왼쪽오른쪽 12px */
     background-color: var(--background-color);
     /* 배경색 지정 */
+    height: 5vw;
 }
 
 
 /* Logo with text */
 
 .navbar__logo {
-    font-size: 24px;
+    font-size: 1.5vw;
     /* 글자 크기 지정, 24px */
     color: var(--text-color);
     /* 글자색 지정 */
@@ -72,7 +73,8 @@ a {
 }
 
 .navbar__menu a {
-    margin-right: 5px;
+    font-size: 1.5vw;
+    margin-right: 1vw;
 }
 
 .navbar__menu a li {
@@ -83,11 +85,12 @@ a {
 .navbar__menu a li:hover {
     background-color: var(--accent-color);
     /* 배경색 지정 */
-    border-radius: 4px;
+    border-radius: 1vw;
     /* 테두리 둥글게 지정, 4px */
 }
 
 .navbar__icons {
+    font-size: 1.5vw;
     list-style: none;
     /* li의 마크를 삭제 */
     color: var(--text-color);
@@ -102,7 +105,7 @@ a {
 /* Icons */
 
 .navbar__icons li {
-    padding: 8px 12px;
+    padding: 1vw 1.5vw;
     /* 안쪽 여백 지정, 위아래 8px, 왼쪽오른쪽 12px */
 }
 
@@ -117,13 +120,41 @@ a {
 .navbar__toggleBtn {
     display: none;
     position: absolute;
-    right: 32px;
+    right: 2vw;
     font-size: 24px;
     color: var(--accent-color);
 }
 
+#main {
+    width: 90%;
+    height: 100%;
+    background-color: #82b6ea;
+    margin: 0 auto;
+    margin-top: 2vw;
+    border-radius: 10px;
+}
+
+#main_img {
+    text-align: center;
+    font-size: 4vw;
+}
+
+#main_img img {
+    width: auto;
+    margin-top: 2vw;
+    max-width: 70%;
+    border-radius: 2vw;
+}
+
 
 /* For small screen */
+
+@media screen and (max-width: 1300px) {
+    .navbar__logo,
+    .navbar__menu a {
+        font-size: 2vw;
+    }
+}
 
 @media screen and (max-width: 768px) {
     /* Nav container */
@@ -131,6 +162,10 @@ a {
         flex-direction: column;
         align-items: flex-start;
         padding: 8px 24px;
+        height: 100%;
+    }
+    .navbar__logo {
+        font-size: 20px;
     }
     /* Menu */
     .navbar__menu {
@@ -140,11 +175,13 @@ a {
         width: 100%;
     }
     .navbar__menu a {
+        font-size: 20px;
         /* Fill in an entire line so that user can click on any space */
         display: block;
     }
     /* Icons */
     .navbar__icons {
+        font-size: 20px;
         display: none;
         justify-content: center;
         width: 100%;
@@ -157,5 +194,9 @@ a {
     .navbar__menu.active,
     .navbar__icons.active {
         display: flex;
+    }
+    #main {
+        flex-direction: column;
+        align-items: center;
     }
 }
